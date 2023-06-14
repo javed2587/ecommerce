@@ -1,0 +1,27 @@
+<table class="table">
+    <thead class="thead-dark theader">
+        <th></th>
+        <th>Name</th>
+        <th>Unit Price</th>
+        <th>Unit in stock</th>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let pro of products">
+            <td class="align-middle">
+                <img src={{pro.imageUrl}} alt="" height="50">
+            </td>
+            <td class="align-middle">{{pro.name}}</td>
+            <td class="align-middle">{{pro.unitPrice | currency: 'USD'}}</td>
+            <td class="align-middle">{{pro.unitsInStock}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+<!-- <p>product-list works!</p>
+<div *ngFor="let pro of products">
+    {{pro.name}} : {{pro.unitPrice | currency: 'USD'}}
+</div> -->
